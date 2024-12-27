@@ -29,7 +29,14 @@ class Taxi(Transportation):
       return self.distance * 40
 
 
-   
+class Train(Transportation):
+   def __init__(self, start, end, station):
+      Transportation().__init__(self, start, end, distance=station)
+
+   def find_cost(self):
+      return self.distance * 5
+
+
 # main program
 
 travel_cost = 0
